@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 09, 2021 at 02:16 PM
+-- Generation Time: Feb 09, 2021 at 02:20 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -51,14 +51,6 @@ CREATE TABLE `likes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `likes`
---
-
-INSERT INTO `likes` (`id`, `user_id`, `post_id`, `created_at`, `updated_at`) VALUES
-(17, 4, 217, '2021-02-09 11:13:58', '2021-02-09 11:13:58'),
-(18, 4, 218, '2021-02-09 11:14:00', '2021-02-09 11:14:00');
 
 -- --------------------------------------------------------
 
@@ -110,16 +102,6 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `user_id`, `body`, `created_at`, `updated_at`) VALUES
-(215, 4, 'Yo', '2021-02-08 14:31:08', '2021-02-08 14:31:08'),
-(216, 4, 'hey', '2021-02-08 14:33:36', '2021-02-08 14:33:36'),
-(217, 5, 'Yeaha', '2021-02-08 14:34:20', '2021-02-08 14:34:20'),
-(218, 5, 'some new stuff huh?', '2021-02-08 14:34:26', '2021-02-08 14:34:26');
-
 -- --------------------------------------------------------
 
 --
@@ -137,14 +119,6 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `username`) VALUES
-(4, 'Stanislav Korostij', 'staskoros@yahoo.com', NULL, '$2y$10$3FA0W3L7BRvDn28rNaqphe9xsutTMHX.5WMnLrfbBUA1/vzp.7mFu', '2eIe2hVwD9vJSFW50NUcvt6EseiuwgRh6LmKJ1lbJYyf0j5VNPrNvdZAercN', '2021-01-30 12:39:35', '2021-01-30 12:39:35', 'admin'),
-(5, 'john smith', 'john@example.com', NULL, '$2y$10$mtb.dRG9PnXEeBmWX1XFD.e5xYAudODv79DFXOciAOHFP/qWpTlO6', NULL, '2021-02-08 14:34:06', '2021-02-08 14:34:06', 'bravo');
 
 --
 -- Indexes for dumped tables
